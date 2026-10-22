@@ -4,6 +4,10 @@ import requests
 import streamlit as st
 import streamlit as st
 import os
+TINYFISH_API_KEY = (
+    st.secrets.get("TINYFISH_API_KEY", "")
+    or os.getenv("TINYFISH_API_KEY", "")
+)
 from dotenv import load_dotenv
 
 
@@ -143,10 +147,7 @@ with st.sidebar:
     st.markdown("---")
     st.caption("Team: Fiza • Garry • Poorva")
     st.caption("Prototype only — not an official verification service.")
-TINYFISH_API_KEY = (
-    st.secrets.get("TINYFISH_API_KEY", "")
-    or os.getenv("TINYFISH_API_KEY", "")
-)
+
 
 # ---------- Hero ----------
 st.markdown("""

@@ -2,7 +2,10 @@ import os
 import re
 import requests
 import streamlit as st
+import streamlit as st
+import os
 from dotenv import load_dotenv
+
 
 try:
     from pypdf import PdfReader
